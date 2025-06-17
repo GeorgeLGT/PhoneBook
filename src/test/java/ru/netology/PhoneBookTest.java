@@ -32,4 +32,17 @@ class PhoneBookTest {
         assertNull(pb.findByName("Charlie")); // несуществующее имя
     }
 
+    @Test
+    void testPrintAllNames() {
+        PhoneBook pb = new PhoneBook();
+        pb.add("Charlie", "111");
+        pb.add("Alice", "222");
+        pb.add("Bob", "333");
+
+        String allNames = pb.printAllNames();
+        String[] names = allNames.split("\n");
+
+        assertArrayEquals(new String[]{"Alice", "Bob", "Charlie"}, names);
+    }
+
 }

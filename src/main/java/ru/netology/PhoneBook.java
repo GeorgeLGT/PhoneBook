@@ -25,4 +25,8 @@ public class PhoneBook {
         return nameToNumber.getOrDefault(name, null);
     }
 
+    public String printAllNames() {
+        return "";
+    }
+
 }
