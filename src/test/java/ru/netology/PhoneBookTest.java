@@ -23,4 +23,13 @@ class PhoneBookTest {
         assertNull(pb.findByNumber("00000")); // несуществующий номер
     }
 
+    @Test
+    void testFindByName() {
+        PhoneBook pb = new PhoneBook();
+        pb.add("Alice", "12345");
+        pb.add("Bob", "67890");
+        assertEquals("67890", pb.findByName("Bob"));
+        assertNull(pb.findByName("Charlie")); // несуществующее имя
+    }
+
 }

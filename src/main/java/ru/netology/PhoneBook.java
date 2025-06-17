@@ -21,4 +21,8 @@ public class PhoneBook {
         return numberToName.getOrDefault(number, null);
     }
 
+    public String findByName(String name) {
+        return null;
+    }
+
 }
