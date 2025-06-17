@@ -1,7 +1,6 @@
 package ru.netology;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
     private Map<String, String> numberToName = new HashMap<>();
@@ -26,7 +25,10 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return "";
+        List<String> names = new ArrayList<>(nameToNumber.keySet());
+        Collections.sort(names);
+
+        return String.join("\n", names);
     }
 
 }
